@@ -1,0 +1,81 @@
+.fanart-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.fanart-item{
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor:zoom-in;
+}
+
+.fanart-item::after{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.fanart-item:hover{
+  opacity: 0.7;
+}
+
+.fanart-image{
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fanart-popup{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.popup-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 90dvh;
+}
+
+.popup-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.fanart-popup .close-button{
+  cursor: pointer;
+  font-size: 3em;
+  color: var(--primary);
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.fanart-popup.active{
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .fanart-section{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

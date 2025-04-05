@@ -1,0 +1,20 @@
+.contact-section div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mail-address{
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.mail-address:hover, .twitter-account:hover{
+  color: var(--primary);
+}
+
+.twitter-account{
+  font-size: 16px;
+  transition: 0.3s;
+}

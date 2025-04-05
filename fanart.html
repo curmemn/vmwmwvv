@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ミタ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="fanart.style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">@vmwmwvv</a>
+  </header>
+  <nav>
+    <a href="fanart.html">FANART</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <section class="fanart-section">
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/250313.jpg">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/250313-1.jpg">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/250209.jpg">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/241220.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/241012.jpg">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240718.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240615.jpg">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240514.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240409.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240216.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/240125(1).png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/231129.png">
+    </div>
+    <div class="fanart-item">
+      <img class="fanart-image" src="images/230418.png">
+    </div>
+  </section>
+  <div class="fanart-popup">
+    <div class="popup-image">
+      <img src="images/250313.jpg">
+    </div>
+    <button class="bi bi-x close-button"></button>
+  </div>
+  <footer>
+    <a href="https://www.x.com/vmwmwvv" class="bi bi-twitter" target="_blank">
+      <span>@vmwmwvv</span>
+    </a>
+  </footer>
+  <script>
+    /* 
+    fanart-item 클릭 시 
+    1. 클릭된 박스 안의 src를 받아와서 fanart-image scr에 넣기
+    2. fanart-popup active 추가
+    3. body에 no-scroll 추가
+    close-button 클릭 시
+    1. fanart-popup에 active 삭제
+    2. body에 있던 no-scroll 삭제
+    */
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    const fanartItems = document.querySelectorAll(".fanart-item");
+    const fanartPopup = document.querySelector(".fanart-popup");
+    const popupImage = fanartPopup.querySelector(".popup-image img");
+    const closeButton = document.querySelector(".close-button");
+    const body = document.body;
+
+    fanartItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const imgSrc = item.querySelector(".fanart-image").src;
+        popupImage.src = imgSrc;
+        fanartPopup.classList.add("active");
+        body.classList.add("no-scroll");
+      });
+    });
+
+    closeButton.addEventListener("click", () => {
+      fanartPopup.classList.remove("active");
+      body.classList.remove("no-scroll");
+    });
+  });
+  </script>
+</body>
+</html>

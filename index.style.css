@@ -1,0 +1,36 @@
+.fanart-button{
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.fanart-button span{
+  display: flex;;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--black);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.fanart-button img{
+  position: absolute;
+  top: -85%;
+  left: -43%;
+  transition: 0.3s;
+}
+
+.fanart-button:hover span{
+  opacity: 1;
+}
+
+.fanart-button:hover img{
+  opacity: 0.5;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ミタ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="contact.style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">@vmwmwvv</a>
+  </header>
+  <nav>
+    <a href="fanart.html">FANART</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <section class="contact-section">
+    <div>
+      <span class="mail-address">ppomm04@gmail.com</span>
+      <span>클릭 시 메일 주소가 복사됩니다.</span>
+      <span class="bi bi-heart"></span>
+      <a href="https://www.x.com/vmwmwvv" class="twitter-account" target="_blank">@vmwmwvv</a>
+      <span>클릭 시 트위터로 이동합니다.</span>
+    </div>
+  </section>
+  <footer>
+    <a href="https://www.x.com/vmwmwvv" class="bi bi-twitter" target="_blank">
+      <span>@vmwmwvv</span>
+    </a>
+  </footer>
+  <script>
+    const mailAddress = document.querySelector('.mail-address');
+    mailAddress.addEventListener('click', () => {
+      window.navigator.clipboard.writeText("ppomm04@gmail.com").then(() => {
+      alert("메일 주소가 복사되었습니다.");
+});
+    })
+  </script>
+</body>
+</html>
