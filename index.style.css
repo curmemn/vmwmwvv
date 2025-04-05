@@ -1,7 +1,7 @@
 .fanart-button{
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -22,8 +22,8 @@
 
 .fanart-button img{
   position: absolute;
-  top: -85%;
-  left: -43%;
+  top: -137%;
+  left: -78%;
   transition: 0.3s;
 }
 
