@@ -1,6 +1,0 @@
-permalink: /:path/
-
-baseurl: ""
-
-markdown: kramdown
-theme: minima
