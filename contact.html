@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +40,10 @@
   <section class="contact-section">
     <div>
       <span class="mail-address">ppomm04@gmail.com</span>
-      <span>클릭 시 메일 주소가 복사됩니다.</span>
+      <span>クリックするとメールアドレスがコピーされます。</span>
       <span class="bi bi-heart"></span>
       <a href="https://www.x.com/vmwmwvv" class="twitter-account" target="_blank">@vmwmwvv</a>
-      <span>클릭 시 트위터로 이동합니다.</span>
+      <span>クリックするとX（旧Twitter）に移動します。</span>
     </div>
   </section>
   <footer>
@@ -55,7 +55,7 @@
     const mailAddress = document.querySelector('.mail-address');
     mailAddress.addEventListener('click', () => {
       window.navigator.clipboard.writeText("ppomm04@gmail.com").then(() => {
-      alert("메일 주소가 복사되었습니다.");
+      alert("メールアドレスがコピーされました。");
 });
     })
   </script>
