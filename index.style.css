@@ -22,8 +22,9 @@
 
 .fanart-button img{
   position: absolute;
-  top: -137%;
-  left: -78%;
+  top: -30%;
+  right: -27%;
+  height: 200%;
   transition: 0.3s;
 }
 
