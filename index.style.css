@@ -27,8 +27,8 @@ section.main-section{
 .fanart-button img{
   position: absolute;
   top: -34%;
-  right: -13%;
-  height: 200%;
+  right: 0%;
+  height: 150%;
   transition: 0.3s;
 }
 
